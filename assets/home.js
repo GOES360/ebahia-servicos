@@ -1,0 +1,1 @@
+fetch('https://api.open-meteo.com/v1/forecast?latitude=-12.9711&longitude=-38.5108&current=temperature_2m,apparent_temperature&timezone=America%2FBahia').then(r=>r.json()).then(j=>{let c=j.current;document.querySelector('#weatherTick').textContent='Salvador agora: '+Math.round(c.temperature_2m)+'°C · sensação '+Math.round(c.apparent_temperature)+'°C'}).catch(()=>{});
